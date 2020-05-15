@@ -53,4 +53,9 @@ export class AppComponent {
       description: 'bla bla bla bla bla'
     }
   ];
+
+  showProductId(productId: string) {
+    console.log(productId);
+  }
+
 }
