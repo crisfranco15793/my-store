@@ -1,3 +1,4 @@
-<div *ngFor="let product of products">
-    <app-product [product]="product" (productAddedToCart)="showProductId($event)"></app-product>
+<div class="products-grid">
+    <app-product *ngFor="let product of products" [product]="product" (productAddedToCart)="showProductId($event)">
+    </app-product>
 </div>
