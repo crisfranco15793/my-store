@@ -9,6 +9,8 @@ import { Product } from './models/product';
 export class AppComponent {
   title = 'my-store';
 
+  number = 0;
+
   products: Product[] = [
     {
       id: '1',
@@ -57,5 +59,7 @@ export class AppComponent {
   showProductId(productId: string) {
     console.log(productId);
   }
+
+
 
 }
