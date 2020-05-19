@@ -6,12 +6,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product/product.component';
 import { ExponentialPipe } from './pipes/exponential.pipe';
+import { HomeComponent } from './components/home/home.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ProductsComponent } from './components/products/products.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    ExponentialPipe
+    ExponentialPipe,
+    HomeComponent,
+    ContactComponent,
+    ProductsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

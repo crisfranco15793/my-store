@@ -1,0 +1,11 @@
+.products-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /*mobile first*/
+}
+
+@media(min-width: 576px){
+    .products-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /*pc later*/
+    }
+}
