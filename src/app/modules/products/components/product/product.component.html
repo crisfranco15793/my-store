@@ -4,4 +4,6 @@
 <p>{{product.description | slice: 0:10}}</p>
 <p>{{today | date:'medium'}}</p>
 <p>{{today | date:'HH:mm'}}</p>
-<button  [routerLink]="['/products', product.id]">See detail</button>
+<button mat-raised-button color="primary" [routerLink]="['/products', product.id]">
+    See detail
+</button>
