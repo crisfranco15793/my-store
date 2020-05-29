@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ExponentialPipe } from './pipes/exponential.pipe';
+import { AngularMaterialModule } from '../angular-material/angular-material.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ExponentialPipe } from './pipes/exponential.pipe';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    AngularMaterialModule
   ],
   exports: [
     HeaderComponent,
