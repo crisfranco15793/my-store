@@ -25,4 +25,12 @@ export class ProductsService {
     return this.httpClient.get<Product>(`${this.productsUrl}/${productId}`);
   }
 
+  updateProduct(product: Partial<Product>): Observable<Product> {
+    return this.httpClient.put<Product>(`${this.productsUrl}/${product.id}`, product);
+  }
+
+  deleteProductById(productId: string): Observable<boolean> {
+    return this.httpClient.delete<boolean>(`${this.productsUrl}/${productId}`);
+  }
+
 }
