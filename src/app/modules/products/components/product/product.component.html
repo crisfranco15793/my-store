@@ -1,9 +1,16 @@
-<h3>{{product.title | uppercase}}</h3>
-<img [src]="product.image" [alt]="product.title">
-<strong>{{product.price | currency}}</strong>
-<p>{{product.description | slice: 0:10}}</p>
-<p>{{today | date:'medium'}}</p>
-<p>{{today | date:'HH:mm'}}</p>
-<button mat-raised-button color="primary" [routerLink]="['/products', product.id]">
-    See detail
-</button>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{product.title | uppercase}}</mat-card-title>
+        <mat-card-subtitle>{{product.price | currency}}</mat-card-subtitle>
+    </mat-card-header>
+    <div class="crop-image"> 
+        <img mat-card-image [src]="product.image" [alt]="product.title">
+    </div>
+    <mat-card-content>
+        <p>{{product.description | slice: 0:10}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <a mat-raised-button [routerLink]="['/products', product.id]">See detail</a>
+        <button mat-raised-button color="primary" (click)="addToCart()">Add to cart</button>
+    </mat-card-actions>
+</mat-card>
