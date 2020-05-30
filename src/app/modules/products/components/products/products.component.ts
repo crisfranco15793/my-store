@@ -9,7 +9,7 @@ import { ProductsService } from '../../../core/services/products.service';
 })
 export class ProductsComponent implements OnInit {
 
-  products: Product[];
+  products: Product[] = [];
 
   showProductId(productId: string) {
     console.log(productId);
@@ -23,7 +23,7 @@ export class ProductsComponent implements OnInit {
   }
 
   getProducts(): void {
-    this.products = this.productsService.getAllProducts();
+    this.productsService.getAllProducts().subscribe(products => this.products = products);
   }
 
 }

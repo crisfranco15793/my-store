@@ -1,5 +1,6 @@
+<div *ngIf="product" >
 <div>
-    <img [src]="product.image" alt="product.title">
+    <img *ngIf="product" [src]="product.image" alt="product.title">
 </div>
 <div>
     <ul>
@@ -11,4 +12,5 @@
         </li>
     </ul>
     <p>{{product.description}}</p>
+</div>
 </div>
