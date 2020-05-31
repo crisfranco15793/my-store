@@ -24,19 +24,4 @@ export class ProductDetailComponent implements OnInit {
     this.productsService.getProductById(productId).subscribe(product => this.product = product);
   }
 
-  updateProduc(): void {
-    const productId = this.activatedRoute.snapshot.paramMap.get('id');
-    const product: Partial<Product> = {
-      id: productId,
-      price: 2500,
-      description: 'hola'
-    };
-    this.productsService.updateProduct(product).subscribe();
-  }
-
-  deleteProductById(): void {
-    const productId = this.activatedRoute.snapshot.paramMap.get('id');
-    this.productsService.deleteProductById(productId).subscribe();
-  }
-
 }
