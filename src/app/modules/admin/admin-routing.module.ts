@@ -5,6 +5,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { ProductsComponent } from './components/products/products.component';
 import { FormProductComponent } from './form-product/form-product.component';
+import { FormUpdateProductComponent } from './components/form-update-product/form-update-product.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
       {
         path: 'products',
         component: ProductsComponent
+      },
+      {
+        path: 'products/update/:id',
+        component: FormUpdateProductComponent
       }
     ]
   },
