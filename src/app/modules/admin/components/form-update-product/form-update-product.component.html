@@ -1,0 +1,38 @@
+<form [formGroup]="formGroup" (ngSubmit)="updateProduct($event)">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Producto</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="row">
+                <div class="colimn-xs">
+                    <mat-form-field>
+                        <input placeholder="Title" matInput type="text" formControlName="title">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="colimn-xs">
+                    <mat-form-field>
+                        <input placeholder="Price" matInput type="number" formControlName="price">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div *ngIf="priceField.errors && priceField.dirty">
+                <p *ngIf="priceField.hasError('isPriceInvalid')">The price cannot be more than $ 10000</p>
+                <p *ngIf="priceField.hasError('required')">This field is required.</p>
+            </div>
+            <div class="row">
+                <div class="colimn-xs">
+                    <mat-form-field>
+                        <textarea placeholder="Description" matInput type="text"
+                            formControlName="description"></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button [disabled]="formGroup.invalid" mat-raised-button type="submit">Update</button>
+        </mat-card-actions>
+    </mat-card>
+</form>
