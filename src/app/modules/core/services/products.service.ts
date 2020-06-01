@@ -25,8 +25,8 @@ export class ProductsService {
     return this.httpClient.get<Product>(`${this.productsUrl}/${productId}`);
   }
 
-  updateProduct(product: Partial<Product>): Observable<Product> {
-    return this.httpClient.put<Product>(`${this.productsUrl}/${product.id}`, product);
+  updateProduct(productId: string, product: Partial<Product>): Observable<Product> {
+    return this.httpClient.put<Product>(`${this.productsUrl}/${productId}`, product);
   }
 
   deleteProductById(productId: string): Observable<boolean> {
