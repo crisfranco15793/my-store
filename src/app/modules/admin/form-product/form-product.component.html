@@ -25,6 +25,10 @@
                     </mat-form-field>
                 </div>
             </div>
+            <div *ngIf="priceField.errors && priceField.dirty">
+                <p *ngIf="priceField.hasError('isPriceInvalid')">The price cannot be more than $ 10000</p>
+                <p *ngIf="priceField.hasError('required')">This field is required.</p>
+            </div>
             <div class="row">
                 <div class="colimn-xs">
                     <mat-form-field>
@@ -35,7 +39,7 @@
             </div>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button type="submit">Save</button>
+            <button [disabled]="formGroup.invalid" mat-raised-button type="submit">Save</button>
         </mat-card-actions>
     </mat-card>
 </form>
