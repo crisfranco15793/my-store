@@ -9,9 +9,14 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { NavComponent } from './components/nav/nav.component';
 import { ProductsComponent } from './components/products/products.component';
+import { FormProductComponent } from './form-product/form-product.component';
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, ProductsComponent],
+  declarations: [
+    ProductFormComponent,
+    NavComponent,
+    ProductsComponent,
+    FormProductComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
