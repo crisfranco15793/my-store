@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "my-store-289d3": {
+      "hosting": {
+        "my-store": [
+          "my-store-289d3"
+        ]
+      }
+    }
+  }
+}
