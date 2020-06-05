@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
+import { AuthService } from '../../../core/services/auth.service';
 import { map, shareReplay } from 'rxjs/operators';
 
 @Component({
@@ -16,6 +18,12 @@ export class NavComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, private authService: AuthService, private router: Router) { }
+
+  logout(): void {
+    this.authService.logout().then(() => {
+      this.router.navigate(['/home']);
+    });
+  }
 
 }
