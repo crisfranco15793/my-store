@@ -37,6 +37,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/admin/admin.module').then(module => module.AdminModule)
   },
   {
+    path: 'auth',
+    loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
+  },
+  {
     path: '**',
     component: PageNotFoundComponent
   }
