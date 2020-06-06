@@ -37,6 +37,12 @@
                     </mat-form-field>
                 </div>
             </div>
+            <div class="row">
+                <div class="colimn-xs">
+                    <img *ngIf="(imageUrl$ | async) as image" [src]="image">
+                    <input type="file" (change)="uploadFile($event)">
+                </div>
+            </div>
         </mat-card-content>
         <mat-card-actions>
             <button [disabled]="formGroup.invalid" mat-raised-button type="submit">Save</button>
