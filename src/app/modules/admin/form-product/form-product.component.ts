@@ -59,7 +59,7 @@ export class FormProductComponent implements OnInit {
       this.imageUrl$ = fileRef.getDownloadURL();
       this.imageUrl$.subscribe(url => {
         this.formGroup.get('image').setValue(url);
-      })
+      });
     }
     )).subscribe();
   }
